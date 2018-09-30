@@ -14,14 +14,14 @@
         			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
         				<div class="footer-menu">
         					<ul>
-        						<li> <a href="{{ route('index') }}" class="active"> Home </a> </li>
-        						<li> <a href="{{ route('multimedia') }}"> Multimedia </a> </li>
-        						<li> <a href="{{ route('about') }}"> About Us </a> </li>
-        						<li> <a href="{{ route('clients') }}"> Clients </a> </li>
-        						<li> <a href="{{ route('services') }}"> Our Services </a> </li>
-        						<li> <a href="{{ route('careers') }}"> Career </a> </li>
-        						<li> <a href="{{ route('holding-companies') }}"> Holding Companies </a> </li>
-        						<li> <a href="{{ route('contact') }}"> Contact Us </a> </li>
+        						<li> <a href="{{ route('index') }}" class="{{ Request::route()->getName() == 'index' ? 'active': '' }}"> Home </a> </li>
+        						<li> <a href="{{ route('multimedia') }}" class="{{ Request::route()->getName() == 'multimedia' ? 'active': '' }}"> Multimedia </a> </li>
+        						<li> <a href="{{ route('about') }}" class="{{ Request::route()->getName() == 'about' ? 'active': '' }}"> About Us </a> </li>
+        						<li> <a href="{{ route('clients') }}" class="{{ Request::route()->getName() == 'clients' ? 'active': '' }}"> Clients </a> </li>
+        						<li> <a href="{{ route('services') }}" class="{{ Request::route()->getName() == 'services' ? 'active': '' }}"> Our Services </a> </li>
+        						<li> <a href="{{ route('careers') }}" class="{{ Request::route()->getName() == 'careers' ? 'active': '' }}"> Career </a> </li>
+        						<li> <a href="{{ route('holding-companies') }}" class="{{ Request::route()->getName() == 'holding-companies' ? 'active': '' }}"> Holding Companies </a> </li>
+        						<li> <a href="{{ route('contact') }}" class="{{ Request::route()->getName() == 'contact' ? 'active': '' }}"> Contact Us </a> </li>
         					</ul>
         				</div>
         			</div>

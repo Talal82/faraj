@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\PrivacyPolicy;
 
 class PagesController extends Controller
 {
@@ -39,7 +40,8 @@ class PagesController extends Controller
     }
 
     public function privacyPolicy(){
-    	return view('front_end.privacy-policy');
+        $policy = PrivacyPolicy::first();
+        return view('front_end.privacy-policy') -> withPolicy($policy);
     }
 
     public function services(){

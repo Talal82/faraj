@@ -42,6 +42,8 @@
                             </th>
                             <th>Sr.</th>
                             <th>Name</th>
+                            <th>Created At</th>
+                            <th>Updated At</th>
                             <th width="200px">Action</th>
                         </tr>
                     </thead>
@@ -51,6 +53,8 @@
                             <td><input type="checkbox" class="checkbox checkbox-custom" data-id="{{$role->id}}"></td>
                             <td>{{ ++$key }}</td>
                             <td>{{ $role->name }}</td>
+                            <td>{{ date('M j,Y h:ia' , strtotime($role -> created_at)) }}</td>
+                            <td>{{ date('M j,Y h:ia' , strtotime($role -> updated_at)) }}</td>
                             <td>
                                 <a class="btn btn-info btn-sm" href="{{ route('roles.show',$role->id) }}">Show</a>
                                 <a class="btn btn-primary btn-sm" href="{{ route('roles.edit',$role->id) }}">Edit</a>

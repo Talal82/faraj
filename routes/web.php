@@ -22,6 +22,11 @@ Route::prefix('home') -> group(function() {
     Route::get('users/{id}/changeStatus', 'UserController@changeStatus') -> name('users.status');
     Route::get('settings/accounts', 'AccountsController@getAccountSettings') -> name('account.index');
 	Route::put('settings/accounts/{id}', 'AccountsController@updateAccountSettings') -> name('account.update');
+	Route::get('privacy-policy', 'PrivacyPolicyController@index') -> name('policy.index');
+	Route::put('privacy-policy/{id}/edit','PrivacyPolicyController@update') -> name('policy.update');
+
+
+
 	Route::delete('delete-multiple-users', 'UserController@deleteMultiple') -> name('users.delete-multiple');
 	Route::delete('delete-multiple-roles', 'RoleController@deleteMultiple') -> name('roles.delete-multiple');
 });

@@ -67,6 +67,16 @@
                 </li>
                 @endcan
 
+                <li class="has_sub">
+                    <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-texture"></i> <span> Cms Management</span> {{-- <span class="menu-arrow"></span> --}}<i class="fas fa-long-arrow-alt-down"></i></a>
+                    <ul class="list-unstyled">
+                        {{-- <li><a href="{{ route('settings.index') }}">General Site Settings</a></li> --}}
+                        <li><a href="{{ route('policy.index') }}">Privacy Policy</a></li>
+                    </ul>
+                </li>
+
+
+
                 @can('manage-services')
                 <li>
                     <a href="#" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Services</span> </a>
