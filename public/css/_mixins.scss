@@ -1,0 +1,69 @@
+//mixins
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+     border-radius: $radius;
+}
+@mixin transition($transition){
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+@mixin transform($transform){
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+}
+@mixin animation($animation){
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    -ms-animation: $animation;
+    animation: $animation;
+}
+@mixin box-shadow($box-shadow){
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    -o-box-shadow: $box-shadow;
+    -ms-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+@mixin text-shadow($text-shadow){
+    -webkit-text-shadow: $text-shadow;
+    -moz-text-shadow: $text-shadow;
+    -o-text-shadow: $text-shadow;
+    -ms-text-shadow: $text-shadow;
+    text-shadow: $text-shadow;
+}
+@mixin mobile {
+    @media only screen and (max-width:767px) {
+        @content;
+    }
+}
+@mixin landscape {
+    @media only screen and (min-width:576px) and (max-width:767px) {
+        @content;
+    }
+}
+@mixin small-tablet {
+    @media only screen and (min-width:600px) and (max-width:767px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width:768px) and (max-width:991px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and (min-width:992px) and (max-width:1199px) {
+        @content;
+    }
+}
+//mixins
