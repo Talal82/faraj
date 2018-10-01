@@ -55,39 +55,46 @@
                     </ul>
                 </li> --}}
 
-                @can('manage-users')
+                @hasanyrole('user-manager|superadmin')
                 <li>
                     <a href="{{ route('users.index') }}" class="waves-effect"><i class="fa fa-user"></i> <span> User Management</span> </a>
                 </li>
-                @endcan
+                @endhasanyrole
 
-                @can('manage-roles')
+
+                @hasanyrole('role-manager|superadmin')
                 <li>
                     <a href="{{ route('roles.index') }}" class="waves-effect"><i class="mdi mdi-texture"></i> <span> Roles Management</span> </a>
                 </li>
-                @endcan
+                @endhasanyrole
+
+
+                @hasanyrole('cms-manager|superadmin')
 
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-texture"></i> <span> Cms Management</span> {{-- <span class="menu-arrow"></span> --}}<i class="fas fa-long-arrow-alt-down"></i></a>
                     <ul class="list-unstyled">
                         {{-- <li><a href="{{ route('settings.index') }}">General Site Settings</a></li> --}}
                         <li><a href="{{ route('policy.index') }}">Privacy Policy</a></li>
+                        <li><a href="{{ route('about.index') }}">About Us</a></li>
                     </ul>
                 </li>
 
+                @endhasanyrole
 
 
-                @can('manage-services')
+
+                @hasanyrole('service-manager|superadmin')
                 <li>
                     <a href="#" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Services</span> </a>
                 </li>
-                @endcan
+                @endhasanyrole
 
-                @can('manage-careers')
+                @hasanyrole('career-manager|superadmin')
                 <li>
                     <a href="#" class="waves-effect"><i class="mdi mdi-view-dashboard"></i> <span> Careers</span> </a>
                 </li>
-                @endcan
+                @endhasanyrole
 
 
                 <li class="has_sub">

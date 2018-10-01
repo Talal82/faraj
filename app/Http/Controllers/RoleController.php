@@ -15,7 +15,7 @@ class RoleController extends Controller
     function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('permission:manage-roles');
+        $this->middleware('role:superadmin|role-manager');
         $this -> breadCrumb = array(
             array(
                 'link' => route('home'),

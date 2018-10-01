@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\PrivacyPolicy;
+use App\Aboutus;
 
 class PagesController extends Controller
 {
@@ -12,7 +13,8 @@ class PagesController extends Controller
     }
 
     public function about(){
-    	return view('front_end.about');
+        $about = Aboutus::first();
+    	return view('front_end.about') -> withAbout($about);
     }
 
     public function careers(){

@@ -54,6 +54,7 @@
                             <td>{{ ++$key }}</td>
                             <td>{{ $role->name }}</td>
                             <td>{{ date('M j,Y h:ia' , strtotime($role -> created_at)) }}</td>
+                            {{-- <td>{{ time_ago(strtotime($role -> created_at)) }}</td> --}}
                             <td>{{ date('M j,Y h:ia' , strtotime($role -> updated_at)) }}</td>
                             <td>
                                 <a class="btn btn-info btn-sm" href="{{ route('roles.show',$role->id) }}">Show</a>

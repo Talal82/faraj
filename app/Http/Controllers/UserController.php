@@ -16,7 +16,7 @@ class UserController extends BaseController
     public function __construct()
     {   
         $this->middleware('auth');
-        $this->middleware('permission:manage-users');
+        $this->middleware('role:superadmin|user-manager');
         $this -> breadCrumb = array(
             array(
                 'link' => route('home'),

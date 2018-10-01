@@ -6,15 +6,12 @@
 
 @section('stylesheets')
 
-
 {{-- datatables  --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.css') }}">
 {{-- reponsive datatables --}}
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/datatables/select.bootstrap4.min.css') }}">
-
-
 
 @endsection
 
@@ -31,7 +28,7 @@
        <table class="table table-responsive">
         <thead>
          <tr>
-          <th>
+          <th width="90px">
             <select id="multiple_select" class="custom-select m-b-5" width="100" name="multiple_select">
               <option value="0">action</option>
               <option value="1">delete</option>

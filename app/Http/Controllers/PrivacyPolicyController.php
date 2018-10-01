@@ -11,7 +11,7 @@ class PrivacyPolicyController extends Controller
 {
 	protected $breadCrumb;
     public function __construct(){
-    	$this -> middleware('auth');
+    	$this -> middleware(['auth','role:superadmin|cms-manager']);
     	$this -> breadCrumb = array(
             array(
                 'link' => route('home'),
